@@ -14,11 +14,15 @@ For Implementing the Azure functions in python we had to adopt the following app
 - Developed an HTTP trigger based Function which converts JSON to XML and then tested the code locally
 - Then Deployed the code using Azure CLI
 - Created a resource group and an Azure Storage account
+
 ` az group create --name deepakResourceGroup8 --location westeurope
 az storage account create --name memx --location westeurope --resource-group deepakResourceGroup8 --sku Standard_LRS`
+
 - This was followed by creating a Linus function App
+
 `az functionapp create --resource-group deepakResourceGroup8 --os-type Linux \ --consumption-plan-location westeurope  --runtime python \   --name jxconverter --storage-account memx`
 - Finally, Deployed the function app project to Azure
+
 `func azure functionapp publish jxconverter`
 
 ## AWS Lambda
